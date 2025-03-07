@@ -5,7 +5,7 @@
 <div class="w-full">
     <div class="p-5">
         <section class="slider-section w-full  ">
-            <div id="customcarousel" class="customcarousel mx-10  carousel slider flex flex-col  justify-start gap-5 ">
+            <div id="customcarousel" class="customcarousel mx-10  carousel slider flex flex-col  justify-start gap-5 p-5">
                 <div class="slideContent w-full">
                     <div class="carousel-inner rooms">
                         <div class="carousel-item active">
