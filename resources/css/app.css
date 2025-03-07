@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('../googleFonts.css');
 
 body,
 html {
@@ -9,7 +10,9 @@ html {
         'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 @media (min-width: 1200px){
-    .headerContent, .customcarousel{
+    .headerContent,
+    .customcarousel,
+    .menu-section{
         width: 1200px;
         margin: 0 auto;
     }

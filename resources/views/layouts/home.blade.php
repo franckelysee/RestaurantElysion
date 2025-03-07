@@ -1,6 +1,7 @@
 @extends('app')
 @section('content')
 <link rel="stylesheet" href="{{ asset('build/assets/css/home/index.css') }}">
+<link rel="stylesheet" href="{{ asset('build/assets/css/menu/menu.css') }}">
 <div class="w-full">
     <div class="p-5">
         <section class="slider-section w-full  ">
@@ -44,7 +45,7 @@
             </div>
         </section>
         <section class="menu-section w-full">
-            <div class="div w-full">
+            <div class="div w-full m-auto">
                 <div class="menusCategories">
                     <ul>
                         <li><a href="#">Entrées</a></li>
@@ -55,22 +56,29 @@
                 </div>
                 <div class="livre-menu">
                     <div class="page-menu">
-                        <h1>Entrées</h1>
-                        <div class="w-full">
-                            <div class="menu-image">
-                                <img src="" alt="" srcset="">
-                            </div>
-                            <div class="menu-content">
-                                <div class="name-price">
-                                    <h1 class="">Menu Name</h1>
-                                    <span class="dots"></span>
-                                    <span class="price">3000 Fcfa</span>
+                        <div class="category-name">
+                            <span class="left-line"></span>
+                            <h1 class="">Entrées</h1>
+                            <span class="right-line"></span>
+                        </div>
+                        <div class="cardMenu-list">
+
+                            <div class="w-full menu-item">
+                                <div class="menu-image">
+                                    <img class="w-full" src="{{ asset('build/assets/images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
                                 </div>
-                                <div class="menu-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
-                                </div>
-                                <div class="orderbtn p-3">
-                                    <button>Order Now</button>
+                                <div class="menu-details">
+                                    <div class="name-price">
+                                        <h1 class="name">Burger Avec Frits</h1>
+                                        <span class="dots"></span>
+                                        <span class="price">3000 Fcfa</span>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                    </div>
+                                    <div class="orderbtn p-3">
+                                        <button>Order Now</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
