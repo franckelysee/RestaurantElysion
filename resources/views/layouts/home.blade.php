@@ -55,7 +55,7 @@
                     </ul>
                 </div>
                 <div class="livre-menu">
-                    <div class="page-menu">
+                    <div class="page-menu page-left hidden">
                         <div class="category-name">
                             <span class="left-line"></span>
                             <h1 class="">Entrées</h1>
@@ -64,8 +64,109 @@
                         <div class="cardMenu-list">
 
                             <div class="w-full menu-item">
-                                <div class="menu-image">
-                                    <img class="w-full" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                <div class="menu-image w-fit">
+                                    <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                </div>
+                                <div class="menu-details">
+                                    <div class="name-price">
+                                        <h1 class="name">Burger Avec Frits</h1>
+                                        <span class="dots"></span>
+                                        <span class="price">3000 Fcfa</span>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                    </div>
+                                    <div class="orderbtn p-3">
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full menu-item">
+                                <div class="menu-image w-fit">
+                                    <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                </div>
+                                <div class="menu-details">
+                                    <div class="name-price">
+                                        <h1 class="name">Burger Avec Frits</h1>
+                                        <span class="dots"></span>
+                                        <span class="price">3000 Fcfa</span>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                    </div>
+                                    <div class="orderbtn p-3">
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full menu-item">
+                                <div class="menu-image w-fit">
+                                    <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                </div>
+                                <div class="menu-details">
+                                    <div class="name-price">
+                                        <h1 class="name">Burger Avec Frits</h1>
+                                        <span class="dots"></span>
+                                        <span class="price">3000 Fcfa</span>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                    </div>
+                                    <div class="orderbtn p-3">
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-menu page-right">
+                        <div class="category-name">
+                            <span class="left-line"></span>
+                            <h1 class="">Entrées</h1>
+                            <span class="right-line"></span>
+                        </div>
+                        <div class="cardMenu-list">
+
+                            <div class="w-full menu-item">
+                                <div class="menu-image w-fit">
+                                    <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                </div>
+                                <div class="menu-details">
+                                    <div class="name-price">
+                                        <h1 class="name">Burger Avec Frits</h1>
+                                        <span class="dots"></span>
+                                        <span class="price">3000 Fcfa</span>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                    </div>
+                                    <div class="orderbtn p-3">
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full menu-item">
+                                <div class="menu-image w-fit">
+                                    <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                </div>
+                                <div class="menu-details">
+                                    <div class="name-price">
+                                        <h1 class="name">Burger Avec Frits</h1>
+                                        <span class="dots"></span>
+                                        <span class="price">3000 Fcfa</span>
+                                    </div>
+                                    <div class="menu-description">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                    </div>
+                                    <div class="orderbtn p-3">
+                                        <button>Order Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-full menu-item">
+                                <div class="menu-image w-fit">
+                                    <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
                                 </div>
                                 <div class="menu-details">
                                     <div class="name-price">
@@ -88,5 +189,8 @@
         </section>
     </div>
 </div>
+
+
 <script type="module" src="{{ asset('js/home/home.js') }}"></script>
+<script type="module" src="{{ asset('js/utils/menu/menu.js') }}"></script>
 @endsection

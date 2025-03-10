@@ -30,19 +30,29 @@
 }
 
 .livre-menu{
-    border: 1px solid #f1c40f;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid #f1c40f; */
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
     color: #efe7d2;
 }
+.page-menu:nth-child(2n+1){
+    border-right: 1px solid #f1c40f;
+}
 
 .livre-menu .page-menu{
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    width: 50%;
+    border: 1px solid #f1c40f;
+    border-radius: 10px;
 }
 .category-name{
     display: flex;
@@ -58,14 +68,17 @@
     height: 1px;
     background-color: #f1c40f;
 }
-
+.page-menu .cardMenu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .menu-item{
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 1px solid #f1c40f8c;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
@@ -74,6 +87,8 @@
     width: 30%;
     border-radius: 50%;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
 }
 .menu-item .menu-details{
     width: 80%;
@@ -105,3 +120,31 @@
 .menu-item .menu-details .name-price .price {
     white-space: nowrap;
 }
+
+/* page rotation */
+
+.page-menu.page-left{
+    left: 0;
+    transform: rotateY(0deg);
+    transition: all 0.3s;
+    /* backface-visibility: hidden; */
+
+}
+.page-menu.page-right{
+    left: 50%;
+    transition: all 0.3s;
+    transform: rotateY(0deg);
+    /* backface-visibility: hidden; */
+}
+.page-menu.turn {
+    left: 50%;
+    transform: rotateY(0deg);
+}
+
+
+.page-menu.back {
+    left: 0;
+    background-color: #f9f9f9;
+    transform: rotateY(-180deg);
+}
+
