@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
-<link rel="stylesheet" href="{{ asset('build/assets/css/home/index.css') }}">
-<link rel="stylesheet" href="{{ asset('build/assets/css/menu/menu.css') }}">
+<link rel="stylesheet" href="{{ asset('css/home/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/menu/menu.css') }}">
 <div class="w-full">
     <div class="p-5">
         <section class="slider-section w-full  ">
@@ -65,7 +65,7 @@
 
                             <div class="w-full menu-item">
                                 <div class="menu-image">
-                                    <img class="w-full" src="{{ asset('build/assets/images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                                    <img class="w-full" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
                                 </div>
                                 <div class="menu-details">
                                     <div class="name-price">
@@ -88,5 +88,5 @@
         </section>
     </div>
 </div>
-<script type="module" src="{{ asset('build/assets/js/home/home.js') }}"></script>
+<script type="module" src="{{ asset('js/home/home.js') }}"></script>
 @endsection

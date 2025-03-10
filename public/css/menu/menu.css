@@ -1,0 +1,107 @@
+.menu-section{
+    margin: auto;
+    text-align: center;
+}
+.menusCategories{
+    border: 1px solid #f1c40f;
+    border-radius: 10px;
+    margin: 20px;
+    overflow-y: auto;
+}
+.menusCategories ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+}
+
+.menusCategories ul li{
+    padding: 10px;
+    border:1px solid #f1c40f8c;
+    color: #efe7d2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menusCategories ul li:hover{
+    border: 1px solid #f1c40f;
+}
+
+.livre-menu{
+    border: 1px solid #f1c40f;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    color: #efe7d2;
+}
+
+.livre-menu .page-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.category-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f1c40f;
+    font-family: 'Dancing Script', cursive;
+}
+.left-line, .right-line{
+    width: 50px;
+    height: 1px;
+    background-color: #f1c40f;
+}
+
+.menu-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #f1c40f8c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.menu-item .menu-image{
+    width: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.menu-item .menu-details{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+}
+
+.menu-item .menu-details .name-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item .menu-details .name-price .name {
+    font-size: 23px;
+}
+
+.menu-item .menu-details .name-price .dots {
+    flex: 1;
+    border-bottom: 2px dotted #8a8a89;
+    margin: 0 10px;
+}
+
+.menu-item .menu-details .name-price .price {
+    white-space: nowrap;
+}

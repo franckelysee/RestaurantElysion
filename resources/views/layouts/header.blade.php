@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('build/assets/css/header.css') }}">
+<link rel="stylesheet" href="{{ asset('css/header.css') }}">
 <div class=" headerContent w-full px-3 py-2 dark:text-[#efe7d2] bg-white dark:bg-black">
     <div class="w-full">
         <div class="desktop p-5 w-full flex items-center justify-between border-b border-gray-200 dark:border-gray-800">

@@ -1,0 +1,16 @@
+
+.rooms{
+    display: flex;
+    overflow-x: auto;
+    --gap:20px;
+    --items:2;
+    gap: var(--gap);
+    padding:calc(var(--gap) / 2);
+    margin: -calc(var(--gap) / 2);
+    scroll-snap-type: x proximity;
+}
+.room{
+    /* width: 10200px; */
+    min-width: calc((100% (var(--items) - 1 * var(--gap))) / var(--items));
+    scroll-snap-align: start;
+}

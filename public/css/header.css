@@ -1,0 +1,20 @@
+
+.headerContent{
+    position: sticky;
+    top: 0;
+}
+.menuContainer .menuItem{
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+    color: #efe7d2;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menuContainer .menuItem:hover{
+    color: #f1c40f;
+}
+.menuContainer .menuItem.active{
+    color: #f1c40f;
+}
