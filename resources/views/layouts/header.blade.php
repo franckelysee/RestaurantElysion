@@ -8,7 +8,7 @@
             <div class="menus">
                 <ul class="menuContainer flex items-center space-x-4">
                     <li class="menuItem active"><a href="#">Accueil</a></li>
-                    <li class="menuItem"><a href="#">Menu</a></li>
+                    <li class="menuItem"><a href="{{ route('menu') }}">Menu</a></li>
                     <li class="menuItem"><a href="#">A Propos</a></li>
                     <li class="menuItem"><a href="#">Réserver une Table</a></li>
                     <li class="menuItem"><a href="#">Contact</a></li>

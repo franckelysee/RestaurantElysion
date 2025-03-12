@@ -6,7 +6,9 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return view(('layouts.home'));
 })->name('home');
-
+Route::get('/menu', function(){
+    return view(('pages.menu'));
+})->name('menu');
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -6,16 +6,37 @@
 body,
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
     --font-sans:
         'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 @media (min-width: 1200px){
     .headerContent,
-    .customcarousel,
-    .menu-section{
+    .customcarousel{
         width: 1200px;
         margin: 0 auto;
     }
+}
+
+/* Définir l'animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optionnel : décalage vers le bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation aux éléments */
+.fade-in {
+    opacity: 0; /* Masquer les éléments par défaut */
+}
+
+.fade-in.visible {
+    animation: fadeIn 1s ease-out forwards; /* Appliquer l'animation */
 }
 @layer base {
     :root {

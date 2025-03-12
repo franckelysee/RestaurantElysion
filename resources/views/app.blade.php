@@ -45,6 +45,7 @@
         </header>
         <main>
             @yield('content')
+            <script src="{{ asset('js/utils/fade-in.js') }}"></script>
         </main>
     </body>
 </html>
