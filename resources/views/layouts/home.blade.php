@@ -1,4 +1,7 @@
 @extends('app')
+@section('title')
+{{ config('app.name') }}
+@endsection
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/home/index.css') }}">
 <div class="w-full">

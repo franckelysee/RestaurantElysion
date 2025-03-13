@@ -1,16 +1,31 @@
-
-.rooms{
+.rooms {
     display: flex;
     overflow-x: auto;
-    --gap:20px;
-    --items:2;
+    --gap: 0.5rem;
+    --items: 3;
     gap: var(--gap);
-    padding:calc(var(--gap) / 2);
-    margin: -calc(var(--gap) / 2);
+    padding: calc(var(--gap) / 2);
+    margin: - calc(var(--gap) / 2);
     scroll-snap-type: x proximity;
+    scrollbar-width: thin; /* Pour Firefox */
+    scrollbar-color: #d4a373 #2a2a2a;
 }
-.room{
-    /* width: 10200px; */
-    min-width: calc((100% (var(--items) - 1 * var(--gap))) / var(--items));
+
+.room {
+    max-width: 300px;
+    width: calc((100% - ((var(--items) - 1) * var(--gap))) / var(--items));
+    min-width: calc((100% - ((var(--items) - 1) * var(--gap))) / var(--items));
     scroll-snap-align: start;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* Style Webkit (Chrome, Safari, Edge) */
+.rooms::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.rooms.is-one{
+    --items:2;
 }

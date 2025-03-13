@@ -1,4 +1,7 @@
 @extends('app')
+@section('title')
+Menu
+@endsection
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/menu/menu.css') }}">
 <link rel="stylesheet" href="{{ asset('css/home/index.css') }}">

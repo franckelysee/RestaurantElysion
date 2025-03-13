@@ -5,10 +5,16 @@
 
 body,
 html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
     --font-sans:
         'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 @media (min-width: 1200px){
     .headerContent,
