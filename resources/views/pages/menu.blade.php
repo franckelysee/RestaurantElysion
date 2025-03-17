@@ -4,7 +4,6 @@ Menu
 @endsection
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/menu/menu.css') }}">
-<link rel="stylesheet" href="{{ asset('css/home/index.css') }}">
 
 <section class="menu-section w-full ">
     <div class=" bg-menu-title flex justify-center items-center", style="">
@@ -30,46 +29,46 @@ Menu
 
                     <div class="w-full menu-item">
                         <div class="menu-image w-fit">
-                            <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                            <img class="" src="{{ asset('images/menu/carpaccioBoeuf.png') }}" alt="MenuImage" srcset="" width="150" height="100">
                         </div>
                         <div class="menu-details">
                             <div class="name-price">
-                                <h1 class="name">Burger Avec Frits</h1>
+                                <h1 class="name">Carpaccio de bœuf</h1>
                                 <span class="dots"></span>
-                                <span class="price">3000 Fcfa</span>
+                                <span class="price">16000 Fcfa</span>
                             </div>
                             <div class="menu-description">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                <p>Fines tranches de bœuf cru, marinées avec de l'huile d'olive, du citron, des câpres et du parmesan</p>
                             </div>
                         </div>
                     </div>
                     <div class="w-full menu-item">
                         <div class="menu-image w-fit">
-                            <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                            <img class="" src="{{ asset('images/menu/veloutePotimarron.png') }}" alt="MenuImage" srcset="" width="150" height="100">
                         </div>
                         <div class="menu-details">
                             <div class="name-price">
-                                <h1 class="name">Burger Avec Frits</h1>
+                                <h1 class="name">Velouté de potimarron</h1>
                                 <span class="dots"></span>
-                                <span class="price">3000 Fcfa</span>
+                                <span class="price">5000 Fcfa</span>
                             </div>
                             <div class="menu-description">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                <p>Soupe crémeuse à base de courge, souvent servie avec une touche de crème fraîche et des graines grillées</p>
                             </div>
                         </div>
                     </div>
                     <div class="w-full menu-item">
                         <div class="menu-image w-fit">
-                            <img class="" src="{{ asset('images/menu/burger_frits.webp') }}" alt="MenuImage" srcset="" width="150" height="100">
+                            <img class="" src="{{ asset('images/menu/tartaresaumon.png') }}" alt="MenuImage" srcset="" width="150" height="100">
                         </div>
                         <div class="menu-details">
                             <div class="name-price">
-                                <h1 class="name">Burger Avec Frits</h1>
+                                <h1 class="name">Tartare de saumon</h1>
                                 <span class="dots"></span>
-                                <span class="price">3000 Fcfa</span>
+                                <span class="price">13000 Fcfa</span>
                             </div>
                             <div class="menu-description">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex aliquid voluptatibus excepturi voluptates illo nam ut velit nulla est quasi, quaerat optio, asperiores non pariatur, voluptatem tempore quae. Corrupti, nobis!</p>
+                                <p>Dés de saumon frais assaisonnés avec de la ciboulette, du citron, et parfois de l’avocat</p>
                             </div>
                         </div>
                     </div>

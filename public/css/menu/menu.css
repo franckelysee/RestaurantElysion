@@ -1,4 +1,12 @@
+@import url('../googleFonts.css');
 
+body{
+    background-image: url('/images/menu/menubg2.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
 .bg-menu-image{
     height: 500px;
 }
@@ -6,13 +14,6 @@
     font-size: 100px;
     font-family: 'Dancing Script', cursive;
     color: #efe7d2;
-}
-body{
-    background-image: url('/images/menu/menubg2.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-
 }
 .desktop-only{
     display: none;
