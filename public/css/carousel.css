@@ -27,5 +27,15 @@
 }
 
 .rooms.is-one{
-    --items:2;
+    --items:1;
+    border-radius: 10px;
+}
+.rooms.is-one img{
+    border-radius: 10px;
+}
+
+@media (min-width: 1024px) {
+    .rooms.is-one{
+        --items:2;
+    }
 }

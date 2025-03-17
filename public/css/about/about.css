@@ -67,8 +67,7 @@ body {
 
 .carousel-content{
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: fit-content;
 }
 
 .carouselBtn .previousBtn{
