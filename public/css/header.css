@@ -1,20 +1,130 @@
-
-.headerContent{
+.headerContent {
     position: sticky;
     top: 0;
+    z-index: 100;
+    background-color: #1C2526;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 10px;
 }
-.menuContainer .menuItem{
-    display: inline-block;
+
+.header-inner {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    z-index: 101;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background: #efe7d2;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Transformation en croix */
+.hamburger.open .bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Menu container */
+.menuContainer .menuItem {
+    display: block;
     padding: 10px;
-    margin: 0 10px;
-    color: #efe7d2;
+    color: #A1A1A1;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+    text-align: center;
+    cursor: pointer;
 }
-.menuContainer .menuItem:hover{
-    color: #f1c40f;
+
+.menuContainer .menuItem:hover {
+    color: #e4d6ae;
 }
-.menuContainer .menuItem.active{
-    color: #f1c40f;
+
+.menuContainer .menuItem.active {
+    color: #e4d6ae;
+}
+
+/* Media Queries */
+@media (max-width: 825px) {
+    .menus {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        background: #1C2526;
+        padding: 20px;
+        transform: translateX(100%); /* Hors écran à droite */
+        transition: transform 0.4s ease-in-out;
+        z-index: 100;
+    }
+
+    .menus.active {
+        display: flex;
+        transform: translateX(0); /* Glisse vers la gauche */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuContainer {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: start;
+        height: 100%;
+        padding-top: 40px; /* Espace pour le hamburger */
+    }
+}
+
+@media (min-width: 826px) {
+    .hamburger {
+        display: none;
+    }
+
+    .menus {
+        display: flex;
+    }
+
+    .menuContainer {
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .menuContainer .menuItem {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
+
+/* Dark mode adjustments */
+.dark .bar {
+    background: #efe7d2;
+}
+
+.dark .menus {
+    background: #1C2526;
 }

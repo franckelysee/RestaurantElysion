@@ -12,6 +12,9 @@ Route::get('/menu', function(){
 Route::get('/about',function(){
     return view('pages.about');
 })->name('about');
+Route::get('/reservation',function(){
+    return view('pages.reservation');
+})->name('reservation');
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

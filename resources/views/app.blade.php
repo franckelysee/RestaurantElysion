@@ -41,7 +41,7 @@
         {{-- @inertiaHead --}}
     </head>
     <body class="font-sans antialiased">
-        <header class="dark:text-[#efe7d2] bg-white dark:bg-black">
+        <header class="dark:text-[#efe7d2] bg-white " style="background-color: #1C2526;">
             @include('layouts.header')
         </header>
         <main class="main-content">
