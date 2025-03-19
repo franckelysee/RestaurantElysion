@@ -68,9 +68,6 @@
             <a href="#">Licensing</a>
             <a href="#">Styleguide</a>
         </div>
-        <div class="footer-made-in">
-            <a href="#">Made in Framer</a>
-        </div>
     </footer>
 
     </div>
