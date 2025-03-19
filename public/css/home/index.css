@@ -4,98 +4,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: url('/images/home/homebg.png');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-.slider-section{
-    background-position: left;
-    /* background-attachment: fixed; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-}
-.customcarousel{
-    background-color: #18171770;
-    padding: 20px;
-}
-.carousel-inner{
-    position: relative;
-    width: 1200px;
-    height: 400px;
-
-}
-.carousel-item.active{
-    opacity: 1;
-    left: 0;
-}
-.carousel-item{
-    opacity: 0;
-    position: absolute;
-    width: 500px;
-    transition: all 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: start;
-    align-items: start;
-    left: -100%;
-    height: 360px;
-}
-.carousel-item h1{
-    font-family:'Dancing Script', cursive;
-}
-.orderbtn{
-    display: inline-block;
-    padding: 10px 45px;
-    background-color: #ffbe33;
-    color: #ffffff;
-    border-radius: 45px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    border: none;
-    margin-top: 10px;
-}
-.dark .orderbtn{
-    background-color: #f1c40f;
-    color: #efe7d2;
-}
-
-.btnIndicatorContainer{
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.btnIndicatorContainer .btnIndicator{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: black;
-    cursor: pointer;
-}
-.dark .btnIndicatorContainer .btnIndicator{
-    background-color: #efe7d2;
-}
-.btnIndicatorContainer .btnIndicator.active{
-    width: 20px;
-    height: 20px;
-    background-color: #ffbe33;
-}
-.dark .btnIndicatorContainer .btnIndicator.active{
-    background-color: #f1c40f;
-}
 
 
 
-
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1C2526;
+    font-family: Arial, sans-serif;
+    color: #E5E7EB;
+}
 
 /* Hero Section */
 .hero-section {
