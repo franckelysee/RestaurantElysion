@@ -17,48 +17,6 @@
             <p class="hero-subtitle">Une histoire de goût, de passion et de convivialité</p>
         </div>
     </section>
-    <section class="carousel_container">
-        <div class="carousel-content " data-slider>
-            <div class="rooms" data-slider-wrapper>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant-blurred.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant2.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant3.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant2.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant3.png') }}" alt="" srcset="">
-                </div>
-                <div class="room">
-                    <img src="{{ asset('images/about/restaurant2.png') }}" alt="" srcset="">
-                </div>
-            </div>
-            <div class="carouselBtn">
-                <div class="previousBtn" data-slider-prev>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                    </svg>
-                </div>
-                <div class="nextBtn" data-slider-next="">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="about-main">
         <div class="about-container">
             <!-- Introduction -->
@@ -125,6 +83,48 @@
                         <h3>Innovation</h3>
                         <p>Repousser les limites de la cuisine tout en respectant la tradition.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="carousel_container py-5">
+        <div class="carousel-content " data-slider>
+            <div class="rooms" data-slider-wrapper>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant-blurred.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant2.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant3.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant2.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant3.png') }}" alt="" srcset="">
+                </div>
+                <div class="room">
+                    <img src="{{ asset('images/about/restaurant2.png') }}" alt="" srcset="">
+                </div>
+            </div>
+            <div class="carouselBtn">
+                <div class="previousBtn" data-slider-prev>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </div>
+                <div class="nextBtn" data-slider-next="">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
                 </div>
             </div>
         </div>
