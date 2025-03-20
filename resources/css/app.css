@@ -1,18 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('../googleFonts.css');
 
 body,
 html {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
     --font-sans:
         'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 @media (min-width: 1200px){
-    .headerContent, .customcarousel{
+    .headerContent,
+    .customcarousel{
         width: 1200px;
         margin: 0 auto;
     }
+}
+
+/* Définir l'animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optionnel : décalage vers le bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation aux éléments */
+.fade-in {
+    opacity: 0; /* Masquer les éléments par défaut */
+}
+
+.fade-in.visible {
+    animation: fadeIn 1s ease-out forwards; /* Appliquer l'animation */
 }
 @layer base {
     :root {

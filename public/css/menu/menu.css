@@ -1,0 +1,278 @@
+@import url('../googleFonts.css');
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #efe7d2;
+    line-height: 1.6;
+}
+body{
+    background-image: url('/images/menu/menubg2.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+.bg-menu-image{
+    height: 500px;
+}
+.bg-menu-title h1{
+    font-size: 100px;
+    font-family: 'Dancing Script', cursive;
+    color: #efe7d2;
+}
+.desktop-only{
+    display: none;
+}
+
+.menu-section{
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+/* Hero */
+.menu-hero {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    color: #f1c40f;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #efe7d2;
+}
+/* Menus categories */
+.menusCategories{
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #e2d3ae;
+    border-radius: 10px;
+    margin: 20px;
+    overflow-y: auto;
+}
+.menusCategories ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 10px;
+    width: max-content;
+    margin: auto;
+}
+
+.menusCategories ul li{
+    padding: 10px;
+    border:1px solid #f1c40f8c;
+    color: #efe7d2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menusCategories ul li:hover{
+    border: 1px solid #f1c40f;
+}
+
+.livre-menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid #f1c40f; */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    color: #efe7d2;
+}
+.page-menu:nth-child(2n+1){
+    border-right: 1px solid #f1c40f;
+}
+
+.livre-menu .page-menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    border: 1px solid #e2d3ae;
+    border-radius: 10px;
+
+}
+.livre-menu .page-menu{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.btn-turn-left, .btn-turn-right{
+    border: 1px solid #f1c40f;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+.btn-turn-left:hover, .btn-turn-right:hover{
+    background-color: #f1c40f;
+}
+.btn-turn-left.disabled,
+.btn-turn-right.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}
+.category-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e6cc8d;
+    font-family: 'Dancing Script', cursive;
+}
+.left-line, .right-line{
+    width: 50px;
+    height: 1px;
+    background-color: #e6cc8d;
+}
+.page-menu .cardMenu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 70vh;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #efe7d2 #111111;
+}
+.menu-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.menu-item:hover{
+    background-color: #111111;
+    scale: 1.05;
+}
+.menu-item .menu-image{
+    width: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+.menu-item .menu-details{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    align-items: start;
+    text-align: left;
+}
+
+.menu-item .menu-details .name-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item .menu-details .name-price .name {
+    font-size: 23px;
+}
+
+.menu-item .menu-details .name-price .dots {
+    flex: 1;
+    border-bottom: 2px dotted #8a8a89;
+    margin: 0 10px;
+}
+
+.menu-item .menu-details .name-price .price {
+    white-space: nowrap;
+}
+
+.book-table{
+    color: #e0c144;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #0f0f0fe1;
+    width: 80%;
+    margin: auto;
+}
+.book-table:hover{
+    color: #f1c40f;
+    background-color: #0f0f0f;
+}
+/* page rotation */
+
+
+@media (min-width: 1200px){
+    .menu-content{
+        width: 100%;
+    }
+    .desktop-only{
+        display: block;
+    }
+    .mobile-only{
+        display: none;
+    }
+    .livre-menu{
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        height: 85vh;
+        /* width: 100%; */
+
+    }
+    .livre-menu .page-menu{
+        position: absolute;
+        width: 50%;
+        background-color: #1C2526;
+    }
+    .page-menu.page-left{
+        left: 0;
+        transform: rotateY(0deg);
+        transition: all 0.3s;
+        /* backface-visibility: hidden; */
+
+    }
+    .page-menu.page-right{
+        left: 50%;
+        transition: all 0.3s;
+        transform: rotateY(0deg);
+        /* backface-visibility: hidden; */
+    }
+    .page-menu.go-right {
+        left: 50%;
+        transform: rotateY(0deg);
+    }
+
+
+    .page-menu.go-left {
+        left: 0;
+        background-color: #f9f9f9;
+        transform: rotateY(-180deg);
+        backface-visibility: #f9f9f9;
+    }
+    .menu-section{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+@media (min-width: 1500px){
+
+    .menu-content{
+        width: 80%;
+    }
+}

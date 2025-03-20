@@ -29,8 +29,9 @@
                 background-color: oklch(0.145 0 0);
             }
         </style>
+        <title>@yield('title')</title>
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        {{-- <title inertia>{{ config('app.name', 'Laravel') }}</title> --}}
 
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
@@ -40,11 +41,13 @@
         {{-- @inertiaHead --}}
     </head>
     <body class="font-sans antialiased">
-        <header>
+        <header class="dark:text-[#efe7d2] bg-white " style="background-color: #1C2526;">
             @include('layouts.header')
         </header>
-        <main>
+        <main class="main-content">
             @yield('content')
+            <script src="{{ asset('js/utils/fade-in.js') }}"></script>
         </main>
+        @include('layouts.footer')
     </body>
 </html>

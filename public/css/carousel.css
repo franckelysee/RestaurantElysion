@@ -1,0 +1,66 @@
+.rooms {
+    display: flex;
+    overflow-x: auto;
+    --gap: 0.5rem;
+    --items: 3;
+    gap: var(--gap);
+    padding: calc(var(--gap) / 2);
+    margin: - calc(var(--gap) / 2);
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin; /* Pour Firefox */
+    scrollbar-color: #d4a373 #2a2a2a;
+}
+
+.room {
+    max-width: 300px;
+    width: calc((100% - ((var(--items) - 1) * var(--gap))) / var(--items));
+    min-width: calc((100% - ((var(--items) - 1) * var(--gap))) / var(--items));
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+/* Style Webkit (Chrome, Safari, Edge) */
+.rooms::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+}
+
+.rooms.is-one{
+    --items:1;
+    border-radius: 10px;
+}
+.rooms.is-one img{
+    border-radius: 10px;
+}
+
+.carousel-content{
+    position: relative;
+    height: fit-content;
+}
+
+.carousel-content .previousBtn{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: #696868c0;
+    padding: 10px;
+    cursor: pointer;
+}
+.carousel-content .nextBtn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: #696868c0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .rooms.is-one{
+        --items:2;
+    }
+    .rooms{
+        overflow: hidden;
+    }
+}

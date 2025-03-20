@@ -1,0 +1,235 @@
+@import url('../googleFonts.css');
+
+
+body{
+    background-color: #111111;
+}
+/* Reservation Page Styles */
+.reservation-page {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Ajuste pour le header et footer */
+    gap: 10px;
+    padding: 10px;
+}
+
+.reservation-image-section {
+    flex: 1;
+    position: relative;
+    background-color: #1C2526;
+    /* display: none; */
+    border-radius: 10px;
+}
+
+.reservation-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.book-table-text {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #E5D9B6;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.reservation-form-section {
+    flex: 1;
+    background-color: #1C2526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.reservation-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1C2526;
+    border-radius: 12px;
+}
+
+.reservation-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #E5E7EB;
+}
+
+.reservation-subtitle {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #E5E7EB;
+    line-height: 1.5;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.date-time-row {
+    display: flex;
+    gap: 20px;
+}
+
+.date-time-row .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #A1A1A1;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2D3334;
+    border: none;
+    border-radius: 8px;
+    color: #A1A1A1;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #A1A1A1;
+    font-style: italic;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23A1A1A1" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: #2D3334;
+    padding-right: 30px;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: none;
+}
+
+.reservation-button {
+    background-color: #E5D9B6;
+    color: #1C2526;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.reservation-button:hover {
+    background-color: #d8cc9f;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1C2526;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a,
+.footer-made-in a {
+    color: #E5E7EB;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-made-in a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (min-width: 1200px) {
+    .reservation-image-section {
+        display: block;
+    }
+    .book-table-text {
+        top: 10%;
+        left: 40px;
+        font-size: 64px;
+    }
+    .reservation-form-section {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .reservation-page {
+        flex-direction: column;
+    }
+
+    .reservation-form-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 530px) {
+    .form-row {
+        flex-direction: column; /* Les champs passent en colonne */
+        gap: 15px; /* Réduit légèrement l'espacement */
+    }
+
+    .date-time-row {
+        flex-direction: column; /* Les champs Date/Time passent en colonne */
+        gap: 15px;
+    }
+
+    .form-row .form-group,
+    .date-time-row .form-group {
+        flex: none; /* Annule le flex: 1 pour prendre toute la largeur */
+        width: 100%; /* Prend toute la largeur */
+    }
+}
