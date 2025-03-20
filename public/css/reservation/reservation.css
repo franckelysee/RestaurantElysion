@@ -1,4 +1,9 @@
+@import url('../googleFonts.css');
 
+
+body{
+    background-color: #111111;
+}
 /* Reservation Page Styles */
 .reservation-page {
     display: flex;

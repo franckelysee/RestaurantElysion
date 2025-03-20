@@ -34,8 +34,33 @@
     border-radius: 10px;
 }
 
+.carousel-content{
+    position: relative;
+    height: fit-content;
+}
+
+.carousel-content .previousBtn{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: #696868c0;
+    padding: 10px;
+    cursor: pointer;
+}
+.carousel-content .nextBtn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: #696868c0;
+    padding: 10px;
+    cursor: pointer;
+}
+
 @media (min-width: 1024px) {
     .rooms.is-one{
         --items:2;
+    }
+    .rooms{
+        overflow: hidden;
     }
 }

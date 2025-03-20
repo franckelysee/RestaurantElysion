@@ -1,15 +1,16 @@
+@import url('../googleFonts.css');
+
+
 .headerContent {
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: #1C2526;
     border-bottom: 1px solid #e5e7eb;
+    font-family: 'Dancing Script', cursive;
     margin-bottom: 10px;
 }
 
-.header-inner {
-    border-bottom: 1px solid #e5e7eb;
-}
 
 /* Hamburger menu styles */
 .hamburger {
@@ -52,20 +53,20 @@
 .menuContainer .menuItem {
     display: block;
     padding: 10px;
-    color: #A1A1A1;
+    color: #e4d6ae;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 23px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
 }
 
 .menuContainer .menuItem:hover {
-    color: #e4d6ae;
+    color: #f1c40f;
 }
 
 .menuContainer .menuItem.active {
-    color: #e4d6ae;
+    color: #f1c40f;
 }
 
 /* Media Queries */

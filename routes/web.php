@@ -15,6 +15,10 @@ Route::get('/about',function(){
 Route::get('/reservation',function(){
     return view('pages.reservation');
 })->name('reservation');
+
+Route::get('/contact',function(){
+    return view('pages.contact');
+})->name('contact');
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

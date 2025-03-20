@@ -68,13 +68,5 @@ Reserver une Table
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="#">Franck Elysee</a>
-            <a href="#">Licensing</a>
-            <a href="#">Styleguide</a>
-        </div>
-    </footer>
 @endsection
 

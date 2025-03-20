@@ -48,5 +48,6 @@
             @yield('content')
             <script src="{{ asset('js/utils/fade-in.js') }}"></script>
         </main>
+        @include('layouts.footer')
     </body>
 </html>

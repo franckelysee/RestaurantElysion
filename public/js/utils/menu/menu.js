@@ -6,149 +6,112 @@ class MenusBook {
     init() {
         this.updateZindex();
         this.paginatePages();
-        this.updateButtonStates(); // Mettre à jour l'état des boutons au démarrage
+        this.updateButtonStates();
     }
 
     paginatePages() {
         const pages = document.querySelectorAll('.page-menu');
-        const btn_left = document.querySelector('.btn-turn-left');
-        const btn_right = document.querySelector('.btn-turn-right');
-        const btn_right_span = document.querySelector('.btn-turn-right span');
-        const btn_left_span = document.querySelector('.btn-turn-left span');
+        const btnLeft = document.querySelector('.btn-turn-left');
+        const btnRight = document.querySelector('.btn-turn-right');
+        const btnLeftSpan = btnLeft.querySelector('span');
+        const btnRightSpan = btnRight.querySelector('span');
 
-        btn_left.addEventListener('click', () => {
-            const btndata = btn_left.getAttribute('data-page');
-            const currentPage = document.querySelector(`.page-menu[data-page="${btndata}"]`);
+        btnLeft.addEventListener('click', () => {
+            const pageNum = parseInt(btnLeft.getAttribute('data-page'));
+            const currentPage = document.querySelector(`.page-menu[data-page="${pageNum}"]`);
 
             if (currentPage && currentPage.classList.contains('page-left') && currentPage.previousElementSibling) {
-                if(!currentPage.classList.contains('go-left') && currentPage.classList.contains('page-left')){
+                if (!currentPage.classList.contains('go-left')) {
                     this.MovePrevPageToRight(currentPage);
                     const prevPage = currentPage.previousElementSibling;
-                    if (prevPage && prevPage.classList.contains('go-left') && prevPage.classList.contains('page-left')) {
+                    if (prevPage && prevPage.classList.contains('go-left')) {
                         this.TurnLeftPage(prevPage);
                     }
-
-                    // Mettre à jour les boutons
-                    btn_left.setAttribute('data-page', parseInt(btndata) - 2);
-                    btn_right.setAttribute('data-page', parseInt(btndata) - 1);
-                    btn_left_span.innerText = "Tourne la Page " + (parseInt(btndata) - 2);
-                    btn_right_span.innerText = "Tourne la Page " + (parseInt(btndata) - 1);
-                }else{
+                    btnLeft.setAttribute('data-page', pageNum - 2);
+                    btnRight.setAttribute('data-page', pageNum - 1);
+                    btnLeftSpan.textContent = `Page Précédente`;
+                    btnRightSpan.textContent = `Page Suivante`;
+                } else {
                     this.TurnLeftPage(currentPage);
-                    btn_left.setAttribute('data-page', parseInt(btndata) - 1);
-                    btn_right.setAttribute('data-page', parseInt(btndata));
-                    btn_left_span.innerText = "Tourne la Page " + (parseInt(btndata) - 1);
-                    btn_right_span.innerText = "Tourne la Page " + (parseInt(btndata));
+                    btnLeft.setAttribute('data-page', pageNum - 1);
+                    btnRight.setAttribute('data-page', pageNum);
                 }
-
-
-                this.updateButtonStates(); // Mettre à jour l'état des boutons
+                this.updateButtonStates();
+                this.updateZindex();
             }
-            this.updateZindex();
         });
 
-        btn_right.addEventListener('click', () => {
-            const btndata = btn_right.getAttribute('data-page');
-            const currentPage = document.querySelector(`.page-menu[data-page="${btndata}"]`);
+        btnRight.addEventListener('click', () => {
+            const pageNum = parseInt(btnRight.getAttribute('data-page'));
+            const currentPage = document.querySelector(`.page-menu[data-page="${pageNum}"]`);
 
             if (currentPage && currentPage.classList.contains('page-right') && currentPage.nextElementSibling) {
-                // Tourner la page actuelle vers la gauche
                 this.TurnRightPage(currentPage);
-
-                // Vérifier si la page suivante existe
                 const nextPage = currentPage.nextElementSibling;
-                console.log("next :", nextPage.nextElementSibling);
                 if (nextPage && nextPage.nextElementSibling) {
-                    this.MoveNextPageToLeft(nextPage); // Déplacer la page suivante vers la gauche
-                    btn_right.setAttribute('data-page', parseInt(btndata) + 2);
-                    btn_left.setAttribute('data-page', parseInt(btndata) +1 );
-                    btn_right_span.innerText = "Tourne la Page " + (parseInt(btndata) + 2);
-                    btn_left_span.innerText = "Tourne la Page " + (parseInt(btndata) +1);
-                }else{
-                    // Mettre à jour les boutons
-                    btn_right.setAttribute('data-page', parseInt(btndata) + 1);
-                    btn_left.setAttribute('data-page', parseInt(btndata));
-                    btn_right_span.innerText = "Tourne la Page " + (parseInt(btndata) + 1);
-                    btn_left_span.innerText = "Tourne la Page " + (parseInt(btndata));
+                    this.MoveNextPageToLeft(nextPage);
+                    btnRight.setAttribute('data-page', pageNum + 2);
+                    btnLeft.setAttribute('data-page', pageNum + 1);
+                    btnRightSpan.textContent = `Page Suivante`;
+                    btnLeftSpan.textContent = `Page Précédente`;
+                } else {
+                    btnRight.setAttribute('data-page', pageNum + 1);
+                    btnLeft.setAttribute('data-page', pageNum);
                 }
-
-
-                this.updateButtonStates(); // Mettre à jour l'état des boutons
+                this.updateButtonStates();
+                this.updateZindex();
             }
-            this.updateZindex();
         });
     }
 
     TurnRightPage(page) {
-        page.classList.remove('page-right');
-        page.classList.remove('go-right');
-        page.classList.add('go-left');
-        page.classList.add('page-left');
+        page.classList.remove('page-right', 'go-right');
+        page.classList.add('go-left', 'page-left');
     }
 
     TurnLeftPage(page) {
-        page.classList.remove('page-left');
-        page.classList.remove('go-left');
-        page.classList.add('go-right');
-        page.classList.add('page-right');
+        page.classList.remove('page-left', 'go-left');
+        page.classList.add('go-right', 'page-right');
     }
 
     MoveNextPageToLeft(page) {
-        page.classList.remove('page-right');
-        page.classList.remove('go-right');
+        page.classList.remove('page-right', 'go-right');
         page.classList.add('page-left');
     }
 
     MovePrevPageToRight(page) {
-        page.classList.remove('page-left');
-        page.classList.remove('go-left');
+        page.classList.remove('page-left', 'go-left');
         page.classList.add('page-right');
     }
 
     updateZindex() {
-        console.log('zindex')
-        const pagesRight = document.querySelectorAll(".page-right");
-        const pagesLeft = document.querySelectorAll(".page-left");
+        const pagesRight = document.querySelectorAll('.page-right');
+        const pagesLeft = document.querySelectorAll('.page-left');
         let zIndexRight = pagesRight.length;
         let zIndexLeft = 0;
 
-        pagesRight.forEach((page) => {
-            page.style.zIndex = zIndexRight;
-            zIndexRight--;
+        pagesRight.forEach(page => {
+            page.style.zIndex = zIndexRight--;
         });
 
-        pagesLeft.forEach((page) => {
-            page.style.zIndex = zIndexLeft;
-            zIndexLeft++;
+        pagesLeft.forEach(page => {
+            page.style.zIndex = zIndexLeft++;
         });
     }
 
     updateButtonStates() {
-        const btn_left = document.querySelector('.btn-turn-left');
-        const btn_right = document.querySelector('.btn-turn-right');
+        const btnLeft = document.querySelector('.btn-turn-left');
+        const btnRight = document.querySelector('.btn-turn-right');
         const totalPages = document.querySelectorAll('.page-menu').length;
 
-        // Désactiver le bouton gauche si on est à la première page
-        if (parseInt(btn_left.getAttribute('data-page')) === 1) {
-            btn_left.disabled = true;
-            btn_left.classList.add('disabled');
-        } else {
-            btn_left.disabled = false;
-            btn_left.classList.remove('disabled');
-        }
+        btnLeft.disabled = parseInt(btnLeft.getAttribute('data-page')) <= 1;
+        btnRight.disabled = parseInt(btnRight.getAttribute('data-page')) >= totalPages;
 
-        // Désactiver le bouton droit si on est à la dernière page
-        if (parseInt(btn_right.getAttribute('data-page')) === totalPages) {
-            btn_right.disabled = true;
-            btn_right.classList.add('disabled');
-        } else {
-            btn_right.disabled = false;
-            btn_right.classList.remove('disabled');
-        }
+        btnLeft.classList.toggle('disabled', btnLeft.disabled);
+        btnRight.classList.toggle('disabled', btnRight.disabled);
     }
 }
 
-if(window.matchMedia("(min-width: 1200px)").matches){
-
+if (window.matchMedia("(min-width: 1200px)").matches) {
     new MenusBook();
 }

@@ -61,14 +61,7 @@
         <a href="/reservation" class="cta-button">Réserver Maintenant</a>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="#">Franck Elysee</a>
-            <a href="#">Licensing</a>
-            <a href="#">Styleguide</a>
-        </div>
-    </footer>
+    
 
     </div>
 </div>

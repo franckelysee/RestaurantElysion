@@ -1,15 +1,16 @@
 @extends('app')
 @section('title')
-Menu
+Menu - Mon Restaurant
 @endsection
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/menu/menu.css') }}">
 
 <section class="menu-section w-full ">
-    <div class=" bg-menu-title flex justify-center items-center", style="">
-        <h1 class="">Menu</h1>
+    <div class="menu-hero">
+        <h1 class="hero-title">Menu</h1>
+        <p class="hero-subtitle">Savourez l'élégance culinaire</p>
     </div>
-    <div class="div m-auto menu-content">
+    <div class="w-full m-auto menu-content">
         <div class="menusCategories mobile-only">
             <ul>
                 <li><a href="#entre">Entrées</a></li>
@@ -594,10 +595,10 @@ Menu
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                     </svg>
-                    <span>tourne la Page 1</span>
+                    <span>Page Précédente</span>
                 </button>
                 <button class="btn-turn-right cursor-pointer flex gap-1 items-center" data-page="2">
-                    <span>Tourne la Page 2</span>
+                    <span>Page Suivante</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
@@ -605,12 +606,14 @@ Menu
             </div>
         </div>
         <div class="book-table w-full">
-            <a href="#" class="flex w-full justify-center">
+            <a href="{{ route('reservation') }}" class="flex w-full justify-center">
                 Réserver une table
             </a>
         </div>
     </div>
 </section>
+
+
 <script type="module" src="{{ asset('js/utils/menu/menu.js') }}"></script>
 
 @endsection
