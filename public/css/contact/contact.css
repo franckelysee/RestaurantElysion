@@ -1,4 +1,5 @@
-@import url('../googleFonts.css');
+@import url('/css/googleFonts.css');
+
 
 /* Réinitialisation */
 * {
@@ -17,7 +18,7 @@
 .contact-hero {
     position: relative;
     height: 50vh;
-    background: url('/images/contact/hero.jpg') center/cover no-repeat;
+    background: url('/images/contact/bg.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,7 +26,7 @@
 }
 
 .hero-overlay {
-    background: rgba(28, 37, 38, 0.7); /* #1C2526 avec opacité */
+    background: rgba(28, 37, 38, 0.7);
     padding: 40px;
     border-radius: 10px;
 }
@@ -45,7 +46,7 @@
 /* Main Section */
 .contact-main {
     padding: 60px 20px;
-    background: url('/images/contact/bg.jpg') center/cover fixed;
+    /* background: url('/images/contact/bg.png') center/cover fixed; */
 }
 
 .contact-container {

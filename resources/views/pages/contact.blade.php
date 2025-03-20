@@ -97,5 +97,5 @@
         </div>
     </section>
 
-    <script src="{{ asset('js/contact.js') }}"></script>
+    <script src="{{ asset('js/utils/contact/contact.js') }}"></script>
 @endsection
